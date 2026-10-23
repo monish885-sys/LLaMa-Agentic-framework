@@ -1,0 +1,279 @@
+[
+  {
+    "rule_name": "Question Completeness",
+    "condition": "Applies to all question types",
+    "description": "Every question must be fully formed and self-contained. It should clearly convey what is being asked without ambiguity or missing information.",
+    "validation_criteria": {
+      "field": "question",
+      "checks": [
+        {"type": "non_empty"},
+        {"type": "length", "min_length": 5},
+        {"type": "contains", "value": "?"}
+      ]
+    }
+  },
+  {
+    "rule_name": "Framing and Grammar",
+    "condition": "Applies to all question types",
+    "description": "The question must be free of grammatical, typographical, or formatting errors.",
+    "validation_criteria": {
+      "field": "question",
+      "checks": [
+        {"type": "no_formatting_errors"}
+      ]
+    }
+  },
+  {
+    "rule_name": "Content Relevance",
+    "condition": "Applies to all question types",
+    "description": "The question must strictly relate to the designated topic.",
+    "validation_criteria": {
+      "field": "question",
+      "checks": [
+        {"type": "contains", "value_field": "topic"}
+      ]
+    }
+  },
+  {
+    "rule_name": "Curriculum Alignment",
+    "condition": "Applies to all question types",
+    "description": "The question must align precisely with the CBSE syllabus and NCERT textbook.",
+    "validation_criteria": {
+      "field": "curriculum",
+      "checks": [
+        {"type": "equals", "value": "CBSE"},
+        {"type": "is_digit", "field": "grade"},
+        {"type": "range", "field": "grade", "min": 1, "max": 12}
+      ]
+    }
+  },
+  {
+    "rule_name": "Difficulty Level",
+    "condition": "Applies to all question types",
+    "description": "Match the intended difficulty level.",
+    "validation_criteria": {
+      "field": "difficulty_level",
+      "checks": [
+        {"type": "in_set", "values": ["Easy", "Medium", "Hard"]}
+      ]
+    }
+  },
+  {
+    "rule_name": "Cognitive Level",
+    "condition": "Applies to all question types",
+    "description": "Match the intended cognitive level.",
+    "validation_criteria": {
+      "field": "cognitive_skill",
+      "checks": [
+        {"type": "in_set", "values": ["Factual", "Understanding", "Application"]}
+      ]
+    }
+  },
+  {
+    "rule_name": "Option Plausibility and Exclusivity",
+    "condition": "Applies to MCQs",
+    "description": "All options must be valid distractors with only one correct answer.",
+    "validation_criteria": {
+      "field": "options",
+      "checks": [
+        {"type": "list_length", "value": 4, "condition": "question_type == 'mcq'"},
+        {"type": "unique_list", "condition": "question_type == 'mcq'"}
+      ]
+    }
+  },
+  {
+    "rule_name": "Unit Consistency",
+    "condition": "Applies to all question types",
+    "description": "Units must be consistent across the question, options, solution, and explanation.",
+    "validation_criteria": {
+      "field": "question",
+      "checks": [
+        {"type": "unit_consistency", "fields": ["question", "options", "solution", "explanation"]}
+      ]
+    }
+  },
+  {
+    "rule_name": "Option-Answer-Solution Alignment",
+    "condition": "Applies to MCQs",
+    "description": "The final answer must be among the listed options.",
+    "validation_criteria": {
+      "field": "answers",
+      "checks": [
+        {"type": "non_empty", "condition": "question_type == 'mcq'"},
+        {"type": "in_list", "list_field": "options", "condition": "question_type == 'mcq'"},
+        {"type": "list_length", "list_field": "options", "value": 4, "condition": "question_type == 'mcq'"}
+      ]
+    }
+  },
+  {
+    "rule_name": "Explanation Format",
+    "condition": "Applies to all question types",
+    "description": "The explanation should follow a proper comparative structure.",
+    "validation_criteria": {
+      "field": "explanation",
+      "checks": [
+        {"type": "starts_with", "value": "The correct answer is"}
+      ]
+    }
+  },
+  {
+    "rule_name": "Solution-Question Alignment",
+    "condition": "Applies to all question types",
+    "description": "The solution must solve the question logically without skipping steps.",
+    "validation_criteria": {
+      "field": "solution",
+      "checks": [
+        {"type": "non_empty"},
+        {"type": "contains", "value_field": "answer", "condition": "question_type == 'mcq'"}
+      ]
+    }
+  },
+  {
+    "rule_name": "Step-by-step Clarity",
+    "condition": "Applies to all question types",
+    "description": "Solutions must show logical, stepwise reasoning.",
+    "validation_criteria": {
+      "field": "solution",
+      "checks": [
+        {"type": "step_count", "min": 2, "max": 3, "condition": "question_type in ['mcq', 'vsa', 'sa']"},
+        {"type": "step_count", "min": 2, "condition": "question_type == 'la'"}
+      ]
+    }
+  },
+  {
+    "rule_name": "Formatting and Math Errors",
+    "condition": "Applies to all question types",
+    "description": "Ensure mathematical notation and formatting are correct.",
+    "validation_criteria": {
+      "field": "question",
+      "checks": [
+        {"type": "no_formatting_errors", "fields": ["question", "options", "solution", "explanation"]}
+      ]
+    }
+  },
+  {
+    "rule_name": "Repetition Check",
+    "condition": "Applies to all question types",
+    "description": "Avoid repeating previously used or similar questions.",
+    "validation_criteria": {
+      "field": "question",
+      "checks": [
+        {"type": "no_repetition"}
+      ]
+    }
+  },
+  {
+    "rule_name": "Marking Scheme Alignment",
+    "condition": "Based on question type",
+    "description": "Ensure marks match the type and subpart format.",
+    "validation_criteria": {
+      "field": "marks",
+      "checks": [
+        {"type": "equals", "value": "2", "condition": "question_type == 'vsa'"},
+        {"type": "equals", "value": "3", "condition": "question_type == 'sa'"},
+        {"type": "equals", "value": "5", "condition": "question_type == 'la'"},
+        {"type": "subparts", "count": 2, "condition": "question_type == 'la'"}
+      ]
+    }
+  },
+  {
+    "rule_name": "Subpart Restriction",
+    "condition": "For VSA and SA only",
+    "description": "VSA/SA should not have subparts. LA must have exactly two.",
+    "validation_criteria": {
+      "field": "question",
+      "checks": [
+        {"type": "no_subparts", "condition": "question_type in ['vsa', 'sa']"},
+        {"type": "subparts", "count": 2, "condition": "question_type == 'la'"}
+      ]
+    }
+  },
+  {
+    "rule_name": "Bloom’s Taxonomy Fit",
+    "condition": "For VSA, SA, and LA",
+    "description": "Ensure proper Bloom’s taxonomy level per question type.",
+    "validation_criteria": {
+      "field": "cognitive_skill",
+      "checks": [
+        {"type": "in_set", "values": ["Understanding", "Application"], "condition": "question_type in ['vsa', 'sa', 'la']"}
+      ]
+    }
+  },
+  {
+    "rule_name": "Question Type Specification",
+    "condition": "Applies to all question types",
+    "description": "Ensure the question type is clearly specified and matches the structure of the question.",
+    "validation_criteria": {
+      "field": "question_type",
+      "checks": [
+        { "type": "is_valid_type", "valid_types": ["mcq", "vsa", "sa", "la"] }
+      ]
+    }
+  },
+  {
+    "rule_name": "Question Type Consistency",
+    "condition": "Applies to all question types",
+    "description": "Ensure the question type is consistent with the structure and answer format provided.",
+    "validation_criteria": {
+      "field": "question_type",
+      "checks": [
+        { "type": "matches_structure" }
+      ]
+    }
+  },
+  {
+    "rule_name": "Conceptual Correctness",
+    "condition": "Applies to all question types",
+    "description": "The concept tested by the question must be factually and academically accurate.",
+    "validation_criteria": {
+      "field": "question",
+      "checks": [
+        { "type": "conceptually_correct" }
+      ]
+    }
+  },
+  {
+    "rule_name": "Curriculum Alignment",
+    "condition": "Applies to all question types",
+    "description": "Ensure question aligns with specific learning outcomes from the designated curriculum.",
+    "validation_criteria": {
+      "field": "curriculum",
+      "checks": [
+        { "type": "matches_curriculum_outcome" }
+      ]
+    }
+  },
+  {
+    "rule_name": "Distractor Quality",
+    "condition": "Applies to MCQs",
+    "description": "Incorrect options (distractors) must be plausible yet clearly incorrect when compared with the correct answer.",
+    "validation_criteria": {
+      "field": "options",
+      "checks": [
+        { "type": "plausible_distractors", "condition": "question_type == 'mcq'" }
+      ]
+    }
+  },
+  {
+    "rule_name": "Visual Aid Suggestion",
+    "condition": "Applies to questions requiring diagrams or visuals",
+    "description": "Suggest inclusion of a visual aid if it would enhance clarity or comprehension.",
+    "validation_criteria": {
+      "field": "question",
+      "checks": [
+        { "type": "visual_aid_needed" }
+      ]
+    }
+  },
+  {
+    "rule_name": "Learning Outcome Match",
+    "condition": "Applies to all question types",
+    "description": "Ensure that the question clearly maps to one or more stated learning outcomes.",
+    "validation_criteria": {
+      "field": "learning_outcome",
+      "checks": [
+        { "type": "match_to_question" }
+      ]
+    }
+  }
+]

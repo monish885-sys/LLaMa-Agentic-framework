@@ -1,0 +1,120 @@
+[
+  {
+    "category": "General",
+    "rules": [
+      {
+        "rule_name": "Curriculum Alignment",
+        "description": "Questions must align with CBSE/NCERT syllabus for Classes 8–10. Reject if topic is irrelevant or outdated."
+      },
+      {
+        "rule_name": "Cognitive Level Appropriateness",
+        "description": "Match Bloom’s Taxonomy levels: Factual/Understanding (Easy/Medium), Application (Medium/Hard). Reject if too simplistic or lacks challenge."
+      },
+      {
+        "rule_name": "Clarity and Precision",
+        "description": "Ensure questions are clearly worded and grammatically correct. Reject if ambiguous, verbose, or error-prone."
+      },
+      {
+        "rule_name": "Completeness",
+        "description": "Include all required data and context. Reject if information is missing or relies on assumed knowledge."
+      },
+      {
+        "rule_name": "Technical Accuracy",
+        "description": "Facts, formulas, terminology, and values must be scientifically accurate. Reject for factual or formulaic errors."
+      },
+      {
+        "rule_name": "Non-redundancy",
+        "description": "Avoid repeating previously asked questions. Reject for minimal variation or duplication."
+      },
+      {
+        "rule_name": "Bias and Sensitivity",
+        "description": "Language must be neutral and inclusive. Reject if biased or culturally inappropriate."
+      },
+      {
+        "rule_name": "Formatting Standards",
+        "description": "Follow defined formats for SCQ, SA, LA, etc. Reject poorly structured or mismatched content."
+      },
+      {
+        "rule_name": "Scientific Integrity",
+        "description": "Reject if concepts are incorrect, overly advanced (e.g. engineering physics), vague, or undefined."
+      },
+      {
+        "rule_name": "Numerical Issues",
+        "description": "Reject if too complex, lacks step-by-step logic, missing units, or relies on unrealistic assumptions."
+      }
+    ]
+  },
+  {
+    "question_type": "SCQ",
+    "rules": [
+      {
+        "rule_name": "Option Structure",
+        "description": "Ensure all 4 options are consistent and logically related. Reject if answer is obvious or no correct option exists."
+      },
+      {
+        "rule_name": "Plausibility of Distractors",
+        "description": "Reject if distractors are illogical or scientifically invalid."
+      }
+    ]
+  },
+  {
+    "question_type": "VSA",
+    "rules": [
+      {
+        "rule_name": "Length and Mark Justification",
+        "description": "Must be 20–30 words and justify 2 marks. Reject if too short, long, or confusing."
+      },
+      {
+        "rule_name": "Answer Clarity",
+        "description": "Reject if multiple correct forms exist without clarification."
+      }
+    ]
+  },
+  {
+    "question_type": "SA",
+    "rules": [
+      {
+        "rule_name": "Word Count and Complexity",
+        "description": "Should be ~50–80 words and justify 3 marks. Reject if too short, too detailed, or improperly focused."
+      },
+      {
+        "rule_name": "Sub-part Count",
+        "description": "Reject if it has more than 3 unrelated sub-questions."
+      }
+    ]
+  },
+  {
+    "question_type": "LA",
+    "rules": [
+      {
+        "rule_name": "Depth and Word Limit",
+        "description": "Should be 80–120 words and justify 5 marks. Reject if shallow, overly simple, or too broad."
+      },
+      {
+        "rule_name": "Sub-question Scope",
+        "description": "Reject if it includes more than 5 sub-questions or lists unrelated points."
+      }
+    ]
+  },
+  {
+    "question_type": "Case Study",
+    "rules": [
+      {
+        "rule_name": "Passage Length and Relevance",
+        "description": "Passage must be 80–100 words and focused. Reject if too long, off-topic, or lacks clarity."
+      },
+      {
+        "rule_name": "Visual Aid Use",
+        "description": "Reject if required visuals are missing, unlabeled, or unclear."
+      },
+      {
+        "rule_name": "Sub-question Structure",
+        "description": "3 subjective sub-questions totaling 4 marks (e.g., 1+2+1). Reject if concepts are repeated or disconnected."
+      },
+      {
+        "rule_name": "Syllabus Alignment",
+        "description": "Reject if requiring external knowledge beyond NCERT textbook for the class."
+      }
+    ]
+  }
+]

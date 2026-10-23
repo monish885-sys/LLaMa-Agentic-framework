@@ -1,0 +1,177 @@
+[
+  {
+    "question_type": "SCQ",
+    "rules": [
+      {
+        "rule_name": "SCQ Source and Scope",
+        "description": "Factual SCQs must be Easy and strictly within NCERT chapter limits. Understanding/Application types can refer to NCERT and PLT sources."
+      },
+      {
+        "rule_name": "Solution and Explanation Accuracy",
+        "description": "The solution must match the correct option. Explanations must justify the correct answer and discuss incorrect ones."
+      },
+      {
+        "rule_name": "Content Coverage",
+        "description": "Ensure SCQ covers all textbook content. Examples may vary but must stay within chapter limits."
+      },
+      {
+        "rule_name": "Image SCQs",
+        "description": "Image-based SCQs must be relevant, clear, and purposeful."
+      },
+      {
+        "rule_name": "Language and Depth",
+        "description": "Use British English. Ensure technical accuracy, real-life context, and age-appropriate language to enhance critical thinking."
+      }
+    ]
+  },
+  {
+    "question_type": "RA",
+    "rules": [
+      {
+        "rule_name": "Assertion-Reason Logic",
+        "description": "Assertion and Reason must be evaluated for truth and logical connection. Options must follow CBSE format (1 to 4)."
+      },
+      {
+        "rule_name": "Chapter/Sub-topic Mapping",
+        "description": "Questions must map to chapters and subtopics. Minimum 4 questions per sub-topic."
+      },
+      {
+        "rule_name": "Difficulty and Cognitive Tagging",
+        "description": "RAs must be tagged to Application level (Medium/Hard). LO tagging is mandatory."
+      },
+      {
+        "rule_name": "Explanation Quality",
+        "description": "Explanations should be based on correct reasoning and clearly differentiate correct/incorrect statements."
+      }
+    ]
+  },
+  {
+    "question_type": "VSA",
+    "rules": [
+      {
+        "rule_name": "Source and Scope",
+        "description": "VSAs must be based strictly on NCERT chapter content."
+      },
+      {
+        "rule_name": "Cognitive and Difficulty Level",
+        "description": "Allowed levels: Factual (Medium), Understanding (Easy/Medium) only. Others not permitted."
+      },
+      {
+        "rule_name": "Word Limit and Structure",
+        "description": "30–50 words. Can include 2 sub-parts (1 mark each)."
+      },
+      {
+        "rule_name": "Terminology",
+        "description": "Use NCERT-aligned vocabulary. British English only."
+      },
+      {
+        "rule_name": "Tagging and Coverage",
+        "description": "Do not apply LO tags. Must be tagged to chapter/sub-topic and ensure full topic coverage."
+      }
+    ]
+  },
+  {
+    "question_type": "SA",
+    "rules": [
+      {
+        "rule_name": "Word Limit",
+        "description": "50–90 words."
+      },
+      {
+        "rule_name": "Content Source and Language",
+        "description": "Use NCERT content only. British English. External examples are allowed if conceptually valid."
+      },
+      {
+        "rule_name": "Framing and Structure",
+        "description": "3-mark questions in formats: (i) 1+1+1, (ii) 2+1, (iii) 3."
+      },
+      {
+        "rule_name": "Cognitive Level Tagging",
+        "description": "Allowed: Factual (E/M), Understanding (E/M/H), Application (M/H)."
+      },
+      {
+        "rule_name": "Solution Quality",
+        "description": "Solutions should be stepwise, clear, and numerically precise. No explanation needed. No LO tags."
+      },
+      {
+        "rule_name": "Image-Based SA",
+        "description": "Questions must require images to answer. Image relevance and clarity mandatory."
+      }
+    ]
+  },
+  {
+    "question_type": "LA",
+    "rules": [
+      {
+        "rule_name": "Sub-question Marking",
+        "description": "Follow formats like 2+2+1, 3+2, etc. Cognitive level based on the highest sub-question."
+      },
+      {
+        "rule_name": "Content and Vocabulary",
+        "description": "Strictly NCERT content. British English. Examples allowed only within conceptual scope."
+      },
+      {
+        "rule_name": "No Explanation",
+        "description": "Only solution is required, not explanation. No LO tags."
+      },
+      {
+        "rule_name": "Word Limit",
+        "description": "100–120 words across sub-questions."
+      },
+      {
+        "rule_name": "Numerical and Image LAs",
+        "description": "Must follow NCERT formulas or image content. Visuals and numerical calculations should be conceptually aligned."
+      }
+    ]
+  },
+  {
+    "question_type": "IMG",
+    "rules": [
+      {
+        "rule_name": "Image Relevance",
+        "description": "Image must match concept, add value, and be clear."
+      },
+      {
+        "rule_name": "Information Delivery",
+        "description": "Image should deliver key information. Avoid overuse of text or hints."
+      },
+      {
+        "rule_name": "Question Design",
+        "description": "Must be image-based, not text-based. Avoid distractions like filters or captions."
+      },
+      {
+        "rule_name": "Cognitive and Skill Level",
+        "description": "Include factual, understanding, and application levels. Skills like labeling and interpreting visuals."
+      },
+      {
+        "rule_name": "Marks Distribution",
+        "description": "For SA: 3 marks via 1/2/3 sub-questions. For LA: follow LA marking logic."
+      }
+    ]
+  },
+  {
+    "question_type": "Case Study",
+    "rules": [
+      {
+        "rule_name": "Structure and Type",
+        "description": "Can be scenario/image/data-based. Must align with NCERT content."
+      },
+      {
+        "rule_name": "Question Framing",
+        "description": "Avoid direct questions. Structure as 1 SA (2 marks) + 2 VSA (1 mark) or 2 SCQ (1 mark)."
+      },
+      {
+        "rule_name": "Content Coverage",
+        "description": "Must cover key concepts, multiple dimensions, and real-life relevance."
+      },
+      {
+        "rule_name": "Language and Complexity",
+        "description": "Avoid complex language. Ensure grade-appropriate tone and cognitive alignment."
+      },
+      {
+        "rule_name": "Word Limits",
+        "description": "SA: 50–80 words. VSA: 30–45 words."
+      }
+    ]
+  }
+]

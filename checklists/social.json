@@ -1,0 +1,141 @@
+[
+  {
+    "category": "General",
+    "rules": [
+      {
+        "rule_name": "Curriculum Alignment",
+        "description": "Questions must align with NCERT/CBSE syllabus and prescribed grade level. Reject if outdated or outside rationalized 2025–26 content."
+      },
+      {
+        "rule_name": "Cognitive Level Appropriateness",
+        "description": "Questions must match Bloom’s levels: Factual (Easy), Understanding (Easy/Medium/Hard), Application (Medium/Hard). Reject if too simplistic."
+      },
+      {
+        "rule_name": "Clarity and Precision",
+        "description": "Questions should be grammatically correct, unambiguous, and clearly worded. Reject if vague or confusing."
+      },
+      {
+        "rule_name": "Completeness",
+        "description": "Questions must provide all necessary context or data. Reject if incomplete or assumes unstated knowledge."
+      },
+      {
+        "rule_name": "Technical Accuracy",
+        "description": "Ensure facts, terminology, and figures are accurate. Reject if factually incorrect."
+      },
+      {
+        "rule_name": "Non-redundancy",
+        "description": "Avoid repeating similar questions. Reject minimal variations or format-only changes."
+      },
+      {
+        "rule_name": "Bias and Sensitivity",
+        "description": "Questions must be neutral and inclusive. Reject if biased (gender, religious, political, regional, etc.)."
+      }
+    ]
+  },
+  {
+    "question_type": "SCQ",
+    "rules": [
+      {
+        "rule_name": "Framing and Alignment",
+        "description": "Must be based on the NCERT curriculum and appropriate content cell. Use 10–15 words, grade-level vocabulary."
+      },
+      {
+        "rule_name": "Cognitive & Difficulty Tagging",
+        "description": "SCQs must be tagged accurately by Bloom’s taxonomy and difficulty level (Easy/Medium/Hard)."
+      },
+      {
+        "rule_name": "Option Quality",
+        "description": "One correct answer, three plausible distractors based on common misconceptions. Reject if options are irrelevant."
+      },
+      {
+        "rule_name": "Explanation Format",
+        "description": "Start with 'The correct answer is...'. Justify correct answer and incorrect ones clearly and briefly."
+      },
+      {
+        "rule_name": "Solution Accuracy",
+        "description": "Ensure the provided solution matches the correct option."
+      }
+    ]
+  },
+  {
+    "question_type": "RA",
+    "rules": [
+      {
+        "rule_name": "Structure and Tags",
+        "description": "Assertion/Reason logic must be clear. Use standard options (1–4). Tag only to Application (Medium/Hard) with mandatory LO tagging."
+      },
+      {
+        "rule_name": "Explanation",
+        "description": "Clear explanation must accompany the correct answer, including reasoning for incorrect options."
+      },
+      {
+        "rule_name": "Chapter/Sub-topic Coverage",
+        "description": "Ensure mapping to specific chapters/subtopics with minimum four questions each."
+      }
+    ]
+  },
+  {
+    "question_type": "VSA",
+    "rules": [
+      {
+        "rule_name": "Framing and Alignment",
+        "description": "Must be grammatically correct, conceptually aligned to NCERT content, and mapped to the sub-topic level."
+      },
+      {
+        "rule_name": "Cognitive Level",
+        "description": "Only Factual (Medium), Understanding (Easy/Medium) allowed. Avoid repetition or subparts."
+      },
+      {
+        "rule_name": "Solution Format",
+        "description": "Answer should be crisp and concise, ≤ 40 words, in 2–3 bullet points."
+      }
+    ]
+  },
+  {
+    "question_type": "SA",
+    "rules": [
+      {
+        "rule_name": "Framing and Alignment",
+        "description": "Framing must be correct, based on NCERT, and aligned to chapter/sub-topic/sub-sub-topic."
+      },
+      {
+        "rule_name": "Cognitive Level",
+        "description": "Understanding (Easy/Medium/Hard), Application (Medium/Hard). Only one question; no subparts allowed."
+      },
+      {
+        "rule_name": "Solution Format",
+        "description": "Answer ≤ 60 words, in 3–5 bullet points, and must align with NCERT."
+      }
+    ]
+  },
+  {
+    "question_type": "LA",
+    "rules": [
+      {
+        "rule_name": "Framing and Tagging",
+        "description": "Based on grade content cell and learning outcomes. Must align with Bloom’s levels: Understanding (M/H), Application (M/H)."
+      },
+      {
+        "rule_name": "Solution Format",
+        "description": "Answer ≤ 120 words, presented in 5–7 bullet points. Must follow NCERT content."
+      }
+    ]
+  },
+  {
+    "question_type": "Case Study",
+    "rules": [
+      {
+        "rule_name": "Passage Structure",
+        "description": "80–100 words from the same concept. Questions: 1 mark (F/U), 1 mark (U), 2 marks (U-hard/Application-M)."
+      },
+      {
+        "rule_name": "Reject Conditions",
+        "description": "Reject if passage is too long, lacks focus, includes repeated concepts, or missing necessary visual aids."
+      },
+      {
+        "rule_name": "Curriculum Alignment",
+        "description": "Must not require knowledge beyond NCERT curriculum."
+      }
+    ]
+  }
+]

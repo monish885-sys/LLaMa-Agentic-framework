@@ -1,0 +1,167 @@
+[
+  {
+    "question_type": "SCQ",
+    "rules": [
+      {
+        "rule_name": "Definition and Structure",
+        "description": "Single Choice Questions allow only one correct option; distractors should reflect common misconceptions."
+      },
+      {
+        "rule_name": "Cognitive and Difficulty Tagging",
+        "description": "Ensure appropriate tagging. Factual (Medium), Understanding (Easy/Medium/Hard), Application (Medium/Hard)."
+      },
+      {
+        "rule_name": "Chapter and Content Tagging",
+        "description": "Check that tagging at chapter and sub-topic level is correct and appears twice for proper tagging."
+      },
+      {
+        "rule_name": "Learning Outcome Tagging",
+        "description": "Apply LOs based on chapter or sub-topic level relevance. Multiple LOs may be tagged if valid."
+      },
+      {
+        "rule_name": "Solution and Explanation Format",
+        "description": "Solution must match correct option. Explanation must begin with 'The correct answer is…' and clarify incorrect options."
+      },
+      {
+        "rule_name": "Quality of Questions",
+        "description": "Ensure clarity, NCERT alignment, precision, grammatical accuracy, and British English usage."
+      },
+      {
+        "rule_name": "Option Formatting",
+        "description": "Use 1), 2), 3), 4) format during validation. Maintain option clarity and avoid repetition."
+      },
+      {
+        "rule_name": "Distractor Quality",
+        "description": "Plausible distractors must be used. Avoid 'All of the above' or 'None' unless justified."
+      },
+      {
+        "rule_name": "Spelling and Language",
+        "description": "Use British English. Convert American spellings (e.g., color → colour)."
+      },
+      {
+        "rule_name": "Duplicate Check",
+        "description": "Identify duplicates. If more than 4 similar questions exist, reject the question."
+      }
+    ]
+  },
+  {
+    "question_type": "SA",
+    "rules": [
+      {
+        "rule_name": "Definition",
+        "description": "Short Answer Questions require responses within 40–50 words and are worth 3 marks."
+      },
+      {
+        "rule_name": "Answer Structure",
+        "description": "Must be concise, relevant, and organized with complete sentences."
+      },
+      {
+        "rule_name": "Question Types",
+        "description": "Factual, Inferential, Analytical, Opinion-Based, Vocabulary-Based—support with textual evidence if needed."
+      },
+      {
+        "rule_name": "Cognitive Tagging",
+        "description": "If question has parts, tag to the highest cognitive level. Allowed: Understanding (M/H), Application (M/H)."
+      },
+      {
+        "rule_name": "Content Tagging",
+        "description": "Ensure tagging aligns with chapter/sub-topic. Learning Outcomes not applicable."
+      },
+      {
+        "rule_name": "Quality Control",
+        "description": "Ensure grammar, relevance, precision, and NCERT adherence. Use British English."
+      },
+      {
+        "rule_name": "Duplicate Check",
+        "description": "Reject questions if more than 4 duplicates or similar items are found."
+      }
+    ]
+  },
+  {
+    "question_type": "LA",
+    "rules": [
+      {
+        "rule_name": "Definition and Structure",
+        "description": "Long Answer Questions require 100–120 word answers with intro-body-conclusion structure. Worth 6 marks."
+      },
+      {
+        "rule_name": "Types of LAQs",
+        "description": "Character Analysis, Theme-Based, Justification-Based, Opinion-Based—must include textual support."
+      },
+      {
+        "rule_name": "Cognitive Tagging",
+        "description": "Tag to the highest cognitive level across sub-questions. Allowed: Understanding (M/H), Application (M/H)."
+      },
+      {
+        "rule_name": "Tagging Validation",
+        "description": "Ensure correct chapter/sub-topic tagging. Learning Outcomes not applicable."
+      },
+      {
+        "rule_name": "Quality Assurance",
+        "description": "Check grammar, relevance, accuracy, formatting, and British English usage."
+      },
+      {
+        "rule_name": "Duplicate Check",
+        "description": "If more than 2 duplicates exist, reject the question."
+      }
+    ]
+  },
+  {
+    "question_type": "RA",
+    "rules": [
+      {
+        "rule_name": "Definition",
+        "description": "Assertion-Reason (A/R) tests factual correctness and logical connection between two statements."
+      },
+      {
+        "rule_name": "Standard Options",
+        "description": "Options: A) A & R true, R explains A; B) A & R true, R doesn't explain A; C) A true, R false; D) A false, R true."
+      },
+      {
+        "rule_name": "Tagging",
+        "description": "Tag to appropriate chapter/sub-topic. Cognitive Level: Application (M/H). Link to Learning Outcomes."
+      },
+      {
+        "rule_name": "Explanation Format",
+        "description": "Begin with 'The correct answer is…' and justify why incorrect options are incorrect."
+      },
+      {
+        "rule_name": "Quality Parameters",
+        "description": "Ensure clarity, relevance, alignment, and logical connection. Questions must stimulate analysis."
+      },
+      {
+        "rule_name": "Duplicate Check",
+        "description": "Reject questions with more than 2 duplicates or 3 similar items."
+      }
+    ]
+  },
+  {
+    "question_type": "Extract",
+    "rules": [
+      {
+        "rule_name": "Definition",
+        "description": "Extract-based questions assess comprehension of a passage from NCERT poetry or prose. Worth 5 marks."
+      },
+      {
+        "rule_name": "Extract Selection",
+        "description": "Use short, meaningful excerpts (4–6 lines poetry, 5–8 prose)."
+      },
+      {
+        "rule_name": "Question Types",
+        "description": "Include Factual, Inferential, Literary Device, Theme-Based, Vocabulary questions."
+      },
+      {
+        "rule_name": "Cognitive Tagging",
+        "description": "Tag to the highest cognitive level among sub-questions. Application if any are application-based."
+      },
+      {
+        "rule_name": "Quality Control",
+        "description": "Ensure grammar, relevance, clarity, and correct spelling (British English)."
+      },
+      {
+        "rule_name": "Duplicate Check",
+        "description": "Reject if more than 2 duplicates exist."
+      }
+    ]
+  }
+]

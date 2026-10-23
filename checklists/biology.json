@@ -1,0 +1,146 @@
+[
+  {
+    "rule_name": "Chapter and Sub-topic Tagging",
+    "condition": "All question types",
+    "description": "Each question must be correctly tagged to relevant chapters and appropriate sub-topics. Chapter-level questions are allowed where applicable.",
+    "validation_criteria": {
+      "field": "topic",
+      "checks": [
+        { "type": "non_empty" },
+        { "type": "valid_chapter_or_subtopic" }
+      ]
+    }
+  },
+  {
+    "rule_name": "Cognitive and Difficulty Level Tagging",
+    "condition": "All question types",
+    "description": "Ensure correct tagging of cognitive levels (Factual, Understanding, Application) and difficulty levels (Easy, Medium, Hard).",
+    "validation_criteria": {
+      "field": "cognitive_skill",
+      "checks": [
+        { "type": "in_set", "values": ["Factual", "Understanding", "Application"] }
+      ]
+    }
+  },
+  {
+    "rule_name": "Learning Outcome Alignment",
+    "condition": "All question types",
+    "description": "Questions must be mapped to specific learning outcomes as per coordinator instructions.",
+    "validation_criteria": {
+      "field": "learning_outcome",
+      "checks": [
+        { "type": "non_empty" }
+      ]
+    }
+  },
+  {
+    "rule_name": "Solution Format",
+    "condition": "All question types",
+    "description": "Solutions must only contain the correct answer with no additional explanation, except where explanation is explicitly required.",
+    "validation_criteria": {
+      "field": "solution",
+      "checks": [
+        { "type": "non_empty" }
+      ]
+    }
+  },
+  {
+    "rule_name": "Explanation Format",
+    "condition": "MCQ, Assertion-Reason",
+    "description": "Explanations must start with 'The correct answer is...' and provide justifications for the correct and incorrect options.",
+    "validation_criteria": {
+      "field": "explanation",
+      "checks": [
+        { "type": "starts_with", "value": "The correct answer is" }
+      ]
+    }
+  },
+  {
+    "rule_name": "Grammar and Clarity",
+    "condition": "All question types",
+    "description": "Language should be grammatically correct, well-structured, and age-appropriate.",
+    "validation_criteria": {
+      "field": "question",
+      "checks": [
+        { "type": "no_grammar_errors" }
+      ]
+    }
+  },
+  {
+    "rule_name": "Curriculum Relevance",
+    "condition": "All question types",
+    "description": "Content must align with the NCERT curriculum for the appropriate grade level.",
+    "validation_criteria": {
+      "field": "curriculum",
+      "checks": [
+        { "type": "equals", "value": "NCERT" }
+      ]
+    }
+  },
+  {
+    "rule_name": "Distractor Plausibility",
+    "condition": "MCQs",
+    "description": "All distractors must be plausible, relevant, and clearly distinguishable from the correct answer.",
+    "validation_criteria": {
+      "field": "options",
+      "checks": [
+        { "type": "plausible_distractors" }
+      ]
+    }
+  },
+  {
+    "rule_name": "Scientific Naming Format",
+    "condition": "All question types",
+    "description": "Scientific names must be italicised and follow binomial nomenclature.",
+    "validation_criteria": {
+      "field": "question",
+      "checks": [
+        { "type": "scientific_names_in_italics" }
+      ]
+    }
+  },
+  {
+    "rule_name": "Spelling Consistency",
+    "condition": "All question types",
+    "description": "British English spellings must be used as per NCERT textbook standards.",
+    "validation_criteria": {
+      "field": "question",
+      "checks": [
+        { "type": "british_english_only" }
+      ]
+    }
+  },
+  {
+    "rule_name": "Duplicate Check",
+    "condition": "All question types",
+    "description": "Ensure the question is not duplicated. If more than 2 duplicates exist, reject during validation.",
+    "validation_criteria": {
+      "field": "question",
+      "checks": [
+        { "type": "no_repetition", "threshold": 2 }
+      ]
+    }
+  },
+  {
+    "rule_name": "Explanation in Reason-Assertion",
+    "condition": "Assertion-Reason",
+    "description": "Options must match the CBSE standard 1-4 format, and explanations must distinguish correct logical connections.",
+    "validation_criteria": {
+      "field": "question_type",
+      "checks": [
+        { "type": "matches_standard_assertion_reason_format" }
+      ]
+    }
+  },
+  {
+    "rule_name": "Marking Scheme Alignment",
+    "condition": "Based on question type",
+    "description": "Mark distribution should follow the designated scheme (VSA: 2, SA: 3, LA: 5, Case: 4).",
+    "validation_criteria": {
+      "field": "marks",
+      "checks": [
+        { "type": "valid_marks_per_type" }
+      ]
+    }
+  }
+]
